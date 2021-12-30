@@ -9,3 +9,7 @@
   * java 삼항연산자
 * 21-12-27
   * java servlet jsp
+* 21-12-29
+  * java servlet jsp
+* 21-12-30
+  * java servlet jsp
