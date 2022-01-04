@@ -17,7 +17,7 @@
 <%
 	
 	Connection con = null;
-	22-01-01 유캔뚜
+
 	String url = "jdbc:mysql://localhost:3306/wuga?useSSL=false&serverTimezone=Asia/Seoul";
 	Statement stmt = null;
 	ResultSet rs = null;
@@ -56,8 +56,8 @@
 			e.printStackTrace();
 		}
 	}
-	request.setAttribute("cList", cList);
-	request.getRequestDispatcher("Order.jsp").forward(request, response);
+	session.setAttribute("cList", cList);
+	response.sendRedirect("Order.jsp");
 
 %>
 </body>
