@@ -38,9 +38,9 @@ public class DeleteComment extends HttpServlet {
 		String C_password = data.getAsJsonObject().get("chkpwd").getAsString();
 		
 		CommentDAO dao = CommentDAO.getInstance();
-		
+		22-01-06 유캔뜌잇
 		String daoPwd = dao.pwdFindCode(C_code);
-		System.out.println("체크 ㅂ ㅣ밀번호 확ㅇ니"+daoPwd);
+		System.out.println("췍 비번확인"+daoPwd);
 		if(C_password.equals(daoPwd)) {
 			
 			dao.deleteComment(C_code);
