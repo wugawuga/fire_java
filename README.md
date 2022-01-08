@@ -15,5 +15,9 @@
   * java servlet jsp
 * 22-01-02
   * java 성적관리 mvc
+* 22-01-04
+  * jsp ajax db 연결
+* 22-01-05
+  * jsp ajax 비동기 댓글 추가
 * 22-01-06
-  * jsp ajax 비동기 댓글 CRUD
+  * jsp ajax 비동기 댓글 수정, 삭제
