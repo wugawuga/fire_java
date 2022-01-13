@@ -19,8 +19,12 @@ public class LecturerUpdateFormAction implements Action {
 		
 		LecturerDAO dao = LecturerDAO.getInstance();
 		LecturerVO lVo = dao.selectLecturerByIdx(idx);
+
+		LecturerDAO daos = LecturerDAO.getInstance();
+		List<LecturerVO> lecturerName = daos.selectLecturerNameByIdx(idx);
 		
 		request.setAttribute("lecturer", lVo);
+		request.setAttribute("lecturerName", lecturerName);
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
