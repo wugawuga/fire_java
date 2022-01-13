@@ -31,3 +31,5 @@
   * java 알고리즘
 * 22-01-12
   * java MVC2 Model
+* 22-01-13
+  * java 교과목 join 추가
