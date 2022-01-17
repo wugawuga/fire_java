@@ -37,3 +37,5 @@
   * java 익명객체, 람다, IO스트림
 * 22-01-15
   * java Generics wildcard
+* 22-01-16
+  * java Generics wildcard
