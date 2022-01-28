@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  
+<mapper namespace="com.green.mapper.member">
+
+	<resultMap type="memberVO" id="memVO">
+		<result column="id" property="id"/>
+		<result column="name" property="name"/>
+		<result column="email" property="email"/>
+		<result column="password" property="password"/>
+		<result column="regdate" property="regdate"/>
+	</resultMap>
+	
+	<resultMap type="java.util.HashMap" id="memResult">
+		<result column="id" property="id"/>
+		<result column="name" property="name"/>
+		<result column="email" property="email"/>
+		<result column="password" property="password"/>
+		<result column="regdate" property="regdate"/>
+	</resultMap>
+
+
+	<select id="selectAll" resultMap="memVO">
+	<!-- id는 메서드 이름, resultMap 쿼리 실행 결과(객체) resultType 쿼리 실행 결과(기본타입) -->
+		SELECT * 
+		FROM members
+	</select>
+	
+	<!--  객체가 아닌 해시맵으로도 데이터를 꺼내 올 수 있다 --> 
+	<select id="selectAllToHash" resultMap="memResult">
+		SELECT * 
+		FROM members
+	</select>
+	
+	<!--  기본타입 반환 -->
+	<select id="selectCnt" resultType="int">
+		SELECT count(*) 
+		FROM members
+	</select>
+	
+	<!-- 쿼리를 실행하기 위한 매개값 설정 -->
+	<select id="selectByEmail" resultType="memberVO" parameterType="String">
+		SELECT * 
+		FROM members
+		WHERE email=#{email}
+	</select>
+	
+	<!--  데이터 삽입 : Insert-->
+	<insert id="insertMember" parameterType="memberVO">
+		INSERT INTO members 
+		VALUES(members_seq.nextval,#{email},#{password},#{name},sysdate);
+	
+	</insert>
+	
+	<!--  데이터 수정 : Update -->
+	<update id="updateMember"  parameterType="memberVO">
+		UPDATE members SET name=#{name}, password=#{password}
+		WHERE email=#{email}
+	
+	</update>
+	
+	<!--  데이터 삭제 : Delete -->
+	<delete id="deleteMember"  parameterType="String">
+		DELETE FROM members
+		WHERE email=#{email}
+	</delete>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</mapper>

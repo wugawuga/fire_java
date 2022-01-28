@@ -18,7 +18,7 @@ public class AuthCheckIntercepter extends HandlerInterceptorAdapter{//implements
 		// 로그인이 안되어 있으면 로그인 부터 처리하세요.
 		HttpSession session = request.getSession();
 		Object ai = session.getAttribute("authInfo");
-		
+		// 22-01-26
 		if(ai!=null) {// 로그인 되어있는 상태
 			return true;  // 그냥 진행하면 됩니다.
 		}
