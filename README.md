@@ -59,3 +59,5 @@
   * spring mybatis
 * 22-01-29
   * java 알고리즘
+* 22-01-30
+  * java Nested, Inner class
