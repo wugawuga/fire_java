@@ -16,7 +16,7 @@ public class FilteringApples {
 				filterApples(inventory, new AppleHeavyWeightPredicate());
 		List<Apple> greenApples =
 				filterApples(inventory, new AppleGreenColorPredicate());
-		//22-01-31 유캔두
+		
 		for(Apple a : heavyApples) {
 			System.out.println("150 이상 사과 : "+a.getWeight()+"g, "+a.getColor()+" 색");
 		}
