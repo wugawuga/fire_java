@@ -23,7 +23,7 @@ public class Quiz22 {
 					d = (a-1 - c*2)*4 - (i+j - c*2);
 				}
 				d += 4*(c*a-(c*c));
-				System.out.print(d+1+" ");
+				System.out.print(d+1+"\t");
 			}
 			System.out.println();
 		}
